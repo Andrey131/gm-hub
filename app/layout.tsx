@@ -1,6 +1,10 @@
 import type { Metadata } from "next";
 import { Inter } from "next/font/google";
 import "./globals.css";
+import { SideBar } from "@/components/SideBar";
+import Image from "next/image";
+import Soccer from "/public/images/soccer.png";
+import Gates from "/public/images/gates.png";
 
 const inter = Inter({ subsets: ["latin"] });
 
@@ -16,7 +20,30 @@ export default function RootLayout({
 }>) {
   return (
     <html lang="en">
-      <body className={inter.className}>{children}</body>
+      <body className="flex justify-center bg-gray-800">
+        <div className="fixed top-5 -left-20 -z-50">
+          <Image
+            src={Soccer}
+            width={550}
+            height={550}
+            alt="Picture of the author"
+          />
+        </div>
+        <div className="fixed top-5 -right-32 -z-50">
+          <Image
+            src={Gates}
+            width={550}
+            height={550}
+            alt="Picture of the author"
+          />
+        </div>
+        <main className="flex basis-4/5 min-h-screen">
+          <SideBar />
+          <div className="flex bg-back basis-5/6 m-2 p-2 rounded-md">
+            {children}
+          </div>
+        </main>
+      </body>
     </html>
   );
 }
