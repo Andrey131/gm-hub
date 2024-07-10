@@ -1,10 +1,11 @@
 "use client";
 
 import React, { useState } from "react";
+import { RaceContentType } from "@/store/data";
 
 type Props = {
   title: string;
-  content: string;
+  content: string | RaceContentType[];
 };
 
 const Spoiler = ({ title, content }: Props) => {

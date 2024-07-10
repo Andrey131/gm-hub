@@ -1,11 +1,12 @@
 import Link from "next/link";
 import { RaceType } from "@/store/data";
 import { Spoiler } from "./Spoiler";
+import { RaceContentType } from "@/store/data";
 
 type Props = {
   blockType: string;
   title: string;
-  body: string;
+  body: string | RaceContentType[];
 };
 
 const TextBlock = (props: Props) => {

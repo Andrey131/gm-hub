@@ -31,8 +31,9 @@ export default async function RaceItem({ params: { id } }: Props) {
       </h1>
       {races.map((race: RaceType) =>
         race.name === id ? (
-          race.content.map((block: RaceContentType) => (
+          race.content.map((block: RaceContentType, index) => (
             <TextBlock
+              key={index}
               blockType={block.blockType}
               title={block.title}
               body={block.body}
