@@ -1,8 +1,14 @@
 export type RaceType = {
   id: string;
   name: string;
-  source: string;
+  backgroundImage: string;
   content: RaceContentType[];
+};
+
+export type RacePreviewType = {
+  id: string;
+  name: string;
+  previewImage: string;
 };
 
 export type RaceContentType = {
@@ -11,11 +17,15 @@ export type RaceContentType = {
   body: string | RaceContentType[];
 };
 
+export interface WithId {
+  id: string;
+}
+
 export const races: RaceType[] = [
   {
     id: "1",
     name: "Human",
-    source: "PH",
+    backgroundImage: "PH",
     content: [
       {
         blockType: "common",
@@ -52,7 +62,7 @@ export const races: RaceType[] = [
   {
     id: "2",
     name: "Gnome",
-    source: "PH",
+    backgroundImage: "PH",
     content: [
       {
         blockType: "common",
@@ -69,7 +79,7 @@ export const races: RaceType[] = [
   {
     id: "3",
     name: "Elf",
-    source: "PH",
+    backgroundImage: "PH",
     content: [
       {
         blockType: "common",
@@ -126,7 +136,7 @@ export const races: RaceType[] = [
   {
     id: "4",
     name: "Dwarf",
-    source: "PH",
+    backgroundImage: "PH",
     content: [
       {
         blockType: "common",
@@ -143,7 +153,7 @@ export const races: RaceType[] = [
   {
     id: "5",
     name: "Half-orc",
-    source: "PH",
+    backgroundImage: "PH",
     content: [
       {
         blockType: "common",
@@ -160,7 +170,7 @@ export const races: RaceType[] = [
   {
     id: "6",
     name: "Halfling",
-    source: "PH",
+    backgroundImage: "PH",
     content: [
       {
         blockType: "common",

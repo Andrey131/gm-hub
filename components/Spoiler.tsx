@@ -12,7 +12,7 @@ const Spoiler = ({ title, content }: Props) => {
   const [isActive, setIsActive] = useState<boolean>(false);
 
   return (
-    <div className="flex flex-col bg-back2 rounded-md m-2 leading-snug">
+    <div className="flex flex-col bg-back2 rounded-md m-2 leading-snug z-10">
       <div
         className="cursor-pointer p-2 text-title font-bold"
         onClick={() => {
