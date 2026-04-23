@@ -3,7 +3,9 @@
 import React, { useState } from "react";
 import { RaceType } from "@/store/data";
 import { TextBlock } from "@/components/TextBlock";
-import { RaceContentType } from "@/store/data";
+import { Feat } from "@/components/Feat";
+import { FeatsList } from "@/components/FeatsList";
+import { RaceContentType, FeatType, HeritageType } from "@/store/data";
 import { RacePageForm } from "@/components/RacePageForm";
 import Image from "next/image";
 
@@ -74,6 +76,23 @@ export default function ClientRacePage({ race }: Props) {
               body={block.body}
             />
           ))}
+          {race.heritages.map((heritage: HeritageType, index) => (
+            <TextBlock
+              key={index}
+              blockType={"spoiler"}
+              title={heritage.name}
+              body={heritage.description}
+            />
+          ))}
+          <div className="mt-5 text-2xl border-b-4 border-titleLine font-bold text-title z-10">
+            Способности наследия
+          </div>
+          <div className="text-l text-title z-10">
+            На 1-м уровне вы получаете одну способность родословной, и получаете
+            дополнительные каждые 4 уровня после этого (на 5-м, 9-м, 13-м и 17-м
+            уровнях). Как {race.name}, вы выбираете из следующих способностей.
+          </div>
+          <FeatsList feats={race.feats} />
         </div>
       )}
       {isEdited ? (
