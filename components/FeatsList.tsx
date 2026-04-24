@@ -1,7 +1,4 @@
-import Link from "next/link";
-import { RaceType } from "@/store/data";
-import { Spoiler } from "./Spoiler";
-import { RaceContentType, FeatType } from "@/store/data";
+import { FeatType } from "@/store/data";
 import { Feat } from "@/components/Feat";
 import React from "react";
 

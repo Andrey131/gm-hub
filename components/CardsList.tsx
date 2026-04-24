@@ -1,5 +1,5 @@
 import { PreviewCard } from "./PreviewCard";
-import { RaceType, RacePreviewType } from "@/store/data";
+import { RacePreviewType } from "@/store/data";
 
 type Props = {
   params: {

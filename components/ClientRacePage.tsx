@@ -3,9 +3,8 @@
 import React, { useState } from "react";
 import { RaceType } from "@/store/data";
 import { TextBlock } from "@/components/TextBlock";
-import { Feat } from "@/components/Feat";
 import { FeatsList } from "@/components/FeatsList";
-import { RaceContentType, FeatType, HeritageType } from "@/store/data";
+import { RaceContentType, HeritageType } from "@/store/data";
 import { RacePageForm } from "@/components/RacePageForm";
 import Image from "next/image";
 

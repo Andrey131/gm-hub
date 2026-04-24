@@ -1,8 +1,4 @@
-import Link from "next/link";
-import { RaceType } from "@/store/data";
-import { Spoiler } from "./Spoiler";
-import { RaceContentType } from "@/store/data";
-import { FeatType, TagType } from "@/store/data";
+import { TagType } from "@/store/data";
 
 type Props = {
   name: string;
@@ -25,6 +21,7 @@ const Feat = (props: Props) => {
           if (tag.name === "Редкий") bgColor = "bg-blue-600";
           return (
             <span
+              key={index}
               className={`w-fit border border-smallTitle ${bgColor} text-white pr-1 pl-1 text-title font-bold mb-1`}
             >
               {tag.name}
